@@ -11,7 +11,8 @@
         android:layout_gravity="center"
         android:background="@drawable/ic_old_school"
         android:layout_margin="5dp"
-        android:id="@+id/iview"/>
+        android:id="@+id/iview"
+        android:orientation="vertical"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -31,5 +32,55 @@
         android:textSize="20sp"
         android:id="@+id/working_days"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="  Faculties  "
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:background="@color/colorPrimary"
+        android:id="@+id/faculties"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="  Pay Voilation Tickets  "
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:background="@color/colorPrimary"
+        android:id="@+id/fees"
+        android:layout_margin="1dp"
+        />
+
+    <Button
+        android:layout_margin="1dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="  Student Parking Tags  "
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:background="@color/colorPrimary"
+        android:id="@+id/stags"
+        />
+
+    <Button
+        android:layout_margin="1dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="  Faculty Parking Tags  "
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:background="@color/colorPrimary"
+        android:id="@+id/ftags"
+        />
 
 </LinearLayout>

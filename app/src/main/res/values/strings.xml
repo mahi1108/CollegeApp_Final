@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">NAVI SUBR</string>
+    <string name="title_activity_profile_info">ProfileInfoActivity</string>
 </resources>
