@@ -1,26 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="cubex.mahesh.collegeapp">
+    package="cubex.mahesh.collegeapp"
+    android:targetSandboxVersion="1">
 
-    <uses-permission android:name=
-        "android.permission.INTERNET"/>
-    <uses-permission android:name=
-        "android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
+        android:networkSecurityConfig="@xml/network_security_config"
         android:allowBackup="true"
+        android:usesCleartextTraffic="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".DashboardActivity" />
         <activity android:name=".SubTitleActivity" />
         <activity android:name=".TimingsActivity" />
@@ -28,7 +23,20 @@
         <activity
             android:name=".ProfileInfoActivity"
             android:label="@string/title_activity_profile_info"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".RequestTranscript" />
+        <activity android:name=".PaymentActivity" />
+        <activity android:name=".StudentTagsActivity" />
+        <activity android:name=".FacultyTagsActivity" />
+        <activity android:name=".PayFeesActivity" />
+        <activity android:name=".HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".PayrollActivity"></activity>
     </application>
 
 </manifest>

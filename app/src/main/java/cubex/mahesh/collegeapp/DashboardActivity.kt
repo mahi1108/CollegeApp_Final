@@ -21,7 +21,7 @@ class DashboardActivity : AppCompatActivity() {
         setContentView(R.layout.activity_dashboard)
 
         titles!!.add("Computer Science Building")
-        titles!!.add("Engineering Building")
+       // titles!!.add("Engineering Building")
         titles!!.add("Graduate School")
         titles!!.add("Police Department")
         titles!!.add("President Building")

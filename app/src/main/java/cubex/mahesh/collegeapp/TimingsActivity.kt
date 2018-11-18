@@ -42,7 +42,7 @@ class TimingsActivity : AppCompatActivity() {
 
 
             }
-            1->{   // engineering building
+            10->{   // engineering building
                 iview.setBackgroundResource(R.drawable.engineering)
                 working_days.setText("Working Days: Monday - Friday")
                 timings.setText("Timings: 8AM - 7PM")
@@ -54,11 +54,11 @@ class TimingsActivity : AppCompatActivity() {
                 ftags.visibility = Button.INVISIBLE
 
             }
-            2->{  // graduate school
+            1->{  // graduate school
                 iview.setBackgroundResource(R.drawable.gs)
                 working_days.setText("Add and drop classes")
                 timings.setText("Request for Transcript")
-                faculties.visibility = Button.VISIBLE
+                faculties.visibility = Button.INVISIBLE
                 faculties.setText("Graduate School Admissions")
                 faculties.setBackgroundColor(Color.WHITE)
                 faculties.setTextColor(Color.GRAY)
@@ -77,16 +77,25 @@ class TimingsActivity : AppCompatActivity() {
                         startActivity(i)
                 }
 
-                faculties.setOnClickListener {
+                timings.setOnClickListener {
+
+                    var i = Intent(this@TimingsActivity,
+                                        RequestTranscript::class.java)
+                    startActivity(i)
+
+
+                }
+
+              /*  faculties.setOnClickListener {
                     var i = Intent( )
                     i.setAction(Intent.ACTION_VIEW)
                     i.setData(Uri.parse("https://ssbprd.subr.edu/PROD8/twbkwbis.P_WWWLogin"))
                     startActivity(i)
-                }
+                }*/
 
 
             }
-            3->{ // police department
+            2->{ // police department
                 iview.setBackgroundResource(R.drawable.pd)
                 working_days.setText("Working Days: Monday - Friday")
                 timings.setText("Timings: 8AM - 5PM")
@@ -95,8 +104,25 @@ class TimingsActivity : AppCompatActivity() {
                 fees.visibility = Button.VISIBLE
                 stags.visibility = Button.VISIBLE
                 ftags.visibility = Button.VISIBLE
+
+                fees.setOnClickListener {
+                    var i= Intent(this@TimingsActivity,
+                            PaymentActivity::class.java)
+                    startActivity(i)
+                }
+                stags.setOnClickListener {
+                    var i= Intent(this@TimingsActivity,
+                            StudentTagsActivity::class.java)
+                    startActivity(i)
+                }
+                ftags.setOnClickListener {
+                    var i= Intent(this@TimingsActivity,
+                            FacultyTagsActivity::class.java)
+                    startActivity(i)
+                }
+
             }
-            4->{ // president building
+            3->{ // president building
                 iview.setBackgroundResource(R.drawable.prsb)
                 working_days.setText("Cashier's office")
                 timings.setText("Payroll office")
@@ -106,13 +132,27 @@ class TimingsActivity : AppCompatActivity() {
                 faculties.setTextColor(Color.GRAY)
                 faculties.gravity = Gravity.LEFT
 
+                working_days.setOnClickListener {
+
+                    var i = Intent(this@TimingsActivity,
+                            PayFeesActivity::class.java)
+                    startActivity(i)
+                }
+
+                timings.setOnClickListener {
+
+                    var i = Intent(this@TimingsActivity,
+                            PayrollActivity::class.java)
+                    startActivity(i)
+
+                }
 
                 fees.visibility = Button.INVISIBLE
                 stags.visibility = Button.INVISIBLE
                 ftags.visibility = Button.INVISIBLE
 
             }
-            5->{
+            4->{
                 iview.setBackgroundResource(R.drawable.map)
                 timings.visibility = TextView.INVISIBLE
                 working_days.visibility = TextView.INVISIBLE

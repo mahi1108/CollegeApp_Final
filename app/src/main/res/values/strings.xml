@@ -1,4 +1,17 @@
 <resources>
     <string name="app_name">NAVI SUBR</string>
     <string name="title_activity_profile_info">ProfileInfoActivity</string>
+
+    <string-array name="sem_values">
+        <item>Select</item>
+        <item>Fall</item>
+        <item>Summer</item>
+        <item>Spring</item>
+    </string-array>
+
+    <string-array name="card_values">
+        <item>Select</item>
+        <item>Credit</item>
+        <item>Debit</item>
+    </string-array>
 </resources>
